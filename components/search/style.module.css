@@ -1,0 +1,65 @@
+.searchContainer {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	width: 286px;
+	height: 48px;
+	border-radius: 100px;
+	border: 1px solid #CFD1D9;
+	padding: 13px;
+	margin-bottom: 15px;
+
+	@media (--medium-up) {
+		width: 582px;
+	}
+}
+
+.searchInput {
+	width: 100%;
+	border: none;
+	font-size: 16px;
+	outline: none;
+
+	&::placeholder {
+		color: #989CAC;
+	}
+}
+
+.hideProfileContainer {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+/* Used AI to help with the checkbox styling */
+.hideProfileCheckbox {
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #06F;
+	border-radius: 2px;
+	cursor: pointer;
+	position: relative;
+
+	&:checked {
+		background-color: #06F;
+		border-color: #06F;
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 7px;
+			top: 2px;
+			width: 5.5px;
+			height: 10px;
+			border: solid white;
+			border-width: 0 1.5px 1.5px 0;
+			transform: rotate(45deg);
+		}
+	}
+}
+
+.hideProfileLabel {
+	font-size: 14px;
+	color: #4E515D;
+}
