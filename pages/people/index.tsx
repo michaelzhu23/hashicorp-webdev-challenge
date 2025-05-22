@@ -76,7 +76,7 @@ export default function PeoplePage({
 	// Sr. candidate TODO: Update URL based on search and department filters
 
 	return (
-		<main className={`"g-grid-container" ${s.pageContainer}`}>
+		<main className={`g-grid-container ${s.pageContainer}`}>
 			<div className={s.pageHeader}>
 				<div>
 					<h1 className={s.title}>HashiCorp Humans</h1>

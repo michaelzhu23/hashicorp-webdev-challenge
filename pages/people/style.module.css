@@ -15,7 +15,8 @@
 	line-height: 64px;
 	letter-spacing: -1.2px;
 	color: #000;
-	margin: 151px 0 24px 0;
+	margin-top: 0;
+	margin-bottom: 24px;
 }
 
 .subtitle {
@@ -31,9 +32,11 @@
 	align-items: center;
 	text-align: center;
 	margin-bottom: 38px;
+	padding-top: 41px;
 
-	@media (--medium-up) {
+	@media (--large) {
 		margin-bottom: 88px;
+		padding-top: 141px;
 	}
 }
 
