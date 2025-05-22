@@ -40,6 +40,9 @@ export const departmentRecordsToDepartmentTree = (
 				)
 			}
 
+			// Add the current item with children to the nested list that is being built
+			nestedList.push(currentItemWithChildren)
+
 			return nestedList
 		},
 		[] as DepartmentRecord[]
