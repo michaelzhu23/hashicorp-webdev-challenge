@@ -10,13 +10,18 @@
 /* ref: https://preset-env.cssdb.org/ */
 
 .title {
-	font-size: 56px;
+	font-size: 34px;
 	font-weight: 300;
-	line-height: 64px;
+	line-height: 42px;
 	letter-spacing: -1.2px;
 	color: #000;
 	margin-top: 0;
 	margin-bottom: 24px;
+
+	@media (--medium-up) {
+		font-size: 56px;
+		line-height: 64px;
+	}
 }
 
 .subtitle {
