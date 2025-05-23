@@ -48,7 +48,7 @@
 	margin-bottom: 38px;
 	padding-top: 41px;
 
-	@media (--large) {
+	@media (min-width: 1200px) {
 		margin-bottom: 88px;
 		padding-top: 141px;
 	}
