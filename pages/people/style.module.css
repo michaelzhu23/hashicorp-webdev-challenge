@@ -58,6 +58,10 @@
 	font-family: Open Sans, sans-serif;
 	margin-bottom: 64px;
 
+	@media (--small) {
+		padding: 0 12px 0 12px;
+	}
+
 	@media (--large) {
 		margin-bottom: 141px;
 	}
