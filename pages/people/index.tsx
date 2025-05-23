@@ -79,7 +79,9 @@ export default function PeoplePage({
 		<main className={`g-grid-container ${s.pageContainer}`}>
 			<div className={s.pageHeader}>
 				<div>
-					<h1 className={s.title}>HashiCorp Humans</h1>
+					<h1 className={s.title}>
+						HashiCorp <span className={s.titleBreak}>Humans</span>
+					</h1>
 					<span className={s.subtitle}>Find a HashiCorp human</span>
 				</div>
 				<Search

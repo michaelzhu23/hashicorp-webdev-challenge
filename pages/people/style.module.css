@@ -13,7 +13,7 @@
 	font-size: 34px;
 	font-weight: 300;
 	line-height: 42px;
-	letter-spacing: -1.2px;
+	letter-spacing: -0.2px;
 	color: #000;
 	margin-top: 0;
 	margin-bottom: 24px;
@@ -21,6 +21,15 @@
 	@media (--medium-up) {
 		font-size: 56px;
 		line-height: 64px;
+		letter-spacing: -1.2px;
+	}
+}
+
+.titleBreak {
+	display: block;
+
+	@media (--medium-up) {
+		display: inline;
 	}
 }
 
@@ -89,6 +98,6 @@
 }
 
 .noResults {
-	color: #4E515D;
+	color: #4e515d;
 	font-size: 14px;
 }
