@@ -9,7 +9,6 @@
 		align-items: flex-start;
 		display: flex;
 		flex-direction: column;
-		gap: 8px;
 		min-width: 200px;
 		width: 100%;
 	}
@@ -23,11 +22,13 @@
 	text-align: center;
 	color: #373942;
 	margin: 0;
+	margin-bottom: 14px;
 }
 
 .clearFilterButton {
 	&:hover {
 		text-decoration: underline;
+		cursor: pointer;
 	}
 
 	font-family: Open Sans, sans-serif;
@@ -46,10 +47,11 @@
 	gap: 8px;
 	padding: 0;
 	margin-left: 4px;
+	margin-bottom: 14px;
 }
 
 .notVisible {
-	visibility: hidden;
+	display: none;
 }
 
 .departmentFilterTreeContainer {
@@ -72,6 +74,7 @@
 	&:hover {
 		text-decoration: underline;
 		color: #1563ff;
+		cursor: pointer;
 	}
 
 	&[aria-pressed='true'] {
@@ -90,6 +93,10 @@
 }
 
 .departmentFilterTreeToggleCaret {
+	&:hover {
+		cursor: pointer;
+	}
+
 	appearance: none;
 	border: none;
 	background: none;

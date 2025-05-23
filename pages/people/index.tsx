@@ -4,6 +4,7 @@
  */
 
 import React, { useState } from 'react'
+import s from './style.module.css'
 import { executeQuery } from '@datocms/cda-client'
 import { GetStaticPropsResult } from 'next'
 import { PersonRecord, DepartmentNode, DepartmentTree, Department } from 'types'
@@ -75,11 +76,13 @@ export default function PeoplePage({
 	// Sr. candidate TODO: Update URL based on search and department filters
 
 	return (
-		<main className="g-grid-container">
-			<div>
+		<main className={`g-grid-container ${s.pageContainer}`}>
+			<div className={s.pageHeader}>
 				<div>
-					<h1>HashiCorp Humans</h1>
-					<span>Find a HashiCorp human</span>
+					<h1 className={s.title}>
+						HashiCorp <span className={s.titleBreak}>Humans</span>
+					</h1>
+					<span className={s.subtitle}>Find a HashiCorp human</span>
 				</div>
 				<Search
 					onInputChange={(e: React.ChangeEvent<HTMLInputElement>) => {
@@ -95,8 +98,8 @@ export default function PeoplePage({
 					}
 				/>
 			</div>
-			<div>
-				<aside>
+			<div className={s.peopleDirectory}>
+				<aside className={s.departmentFilterContainer}>
 					<DepartmentFilter
 						filteredDepartmentIds={filteredDepartmentIds}
 						clearFiltersHandler={() => {
@@ -112,10 +115,10 @@ export default function PeoplePage({
 						departmentTree={departmentTree}
 					/>
 				</aside>
-				<ul>
+				<ul className={s.peopleGrid}>
 					{peopleFiltered.length === 0 && (
 						<div>
-							<span>No results found.</span>
+							<span className={s.noResults}>No results found.</span>
 						</div>
 					)}
 					{peopleFiltered.map((person: PersonRecord) => {

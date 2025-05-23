@@ -4,7 +4,7 @@
 # Documentation on Dato's API is at: https://www.datocms.com/docs/content-delivery-api
 
 query {
-	allDepartments(first: 100) {
+	allDepartments(first: 100, orderBy: name_ASC) {
 		name
 		id
 		parent {
@@ -13,7 +13,7 @@ query {
 		}
 	}
 
-	allPeople(first: 100) {
+	allPeople(first: 100, orderBy: name_ASC) {
 		id
 		name
 		title
