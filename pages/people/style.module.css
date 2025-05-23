@@ -87,3 +87,8 @@
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 }
+
+.noResults {
+	color: #4E515D;
+	font-size: 14px;
+}

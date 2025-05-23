@@ -116,7 +116,7 @@ export default function PeoplePage({
 				<ul className={s.peopleGrid}>
 					{peopleFiltered.length === 0 && (
 						<div>
-							<span>No results found.</span>
+							<span className={s.noResults}>No results found.</span>
 						</div>
 					)}
 					{peopleFiltered.map((person: PersonRecord) => {
