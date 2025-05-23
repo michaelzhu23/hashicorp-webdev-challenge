@@ -28,6 +28,7 @@
 .clearFilterButton {
 	&:hover {
 		text-decoration: underline;
+		cursor: pointer;
 	}
 
 	font-family: Open Sans, sans-serif;
@@ -73,6 +74,7 @@
 	&:hover {
 		text-decoration: underline;
 		color: #1563ff;
+		cursor: pointer;
 	}
 
 	&[aria-pressed='true'] {
@@ -91,6 +93,10 @@
 }
 
 .departmentFilterTreeToggleCaret {
+	&:hover {
+		cursor: pointer;
+	}
+
 	appearance: none;
 	border: none;
 	background: none;
