@@ -28,25 +28,24 @@ export const departmentRecordsToDepartmentTree = (
 	departments: DepartmentNode[]
 ): DepartmentRecord[] => {
 	const listWithChildren = buildChildren(departments)
+	const rootDepartments: DepartmentRecord[] = []
 
-	return departments.reduce(
-		(nestedList: DepartmentRecord[], item: DepartmentRecord) => {
-			const currentItemWithChildren = listWithChildren[item.id]
-			const currentItemParentId = item.parent?.id
+	// Iterate through the departments and build the tree of nested departments
+	departments.forEach((item: DepartmentRecord) => {
+		const currentItemWithChildren = listWithChildren[item.id]
+		const currentItemParentId = item.parent?.id
 
-			if (currentItemParentId) {
-				listWithChildren[currentItemParentId].children.push(
-					currentItemWithChildren
-				)
-			}
+		// If the current item has a parent, add it to the parent's children, otherwise add it to the root departments array
+		if (currentItemParentId) {
+			listWithChildren[currentItemParentId].children.push(
+				currentItemWithChildren
+			)
+		} else {
+			rootDepartments.push(currentItemWithChildren)
+		}
+	})
 
-			// Add the current item with children to the nested list that is being built
-			nestedList.push(currentItemWithChildren)
-
-			return nestedList
-		},
-		[] as DepartmentRecord[]
-	)
+	return rootDepartments
 }
 
 export const filterPeople = (
