@@ -96,8 +96,8 @@ export default function PeoplePage({
 					}
 				/>
 			</div>
-			<div>
-				<aside>
+			<div className={s.peopleDirectory}>
+				<aside className={s.departmentFilterContainer}>
 					<DepartmentFilter
 						filteredDepartmentIds={filteredDepartmentIds}
 						clearFiltersHandler={() => {
@@ -113,7 +113,7 @@ export default function PeoplePage({
 						departmentTree={departmentTree}
 					/>
 				</aside>
-				<ul>
+				<ul className={s.peopleGrid}>
 					{peopleFiltered.length === 0 && (
 						<div>
 							<span>No results found.</span>
